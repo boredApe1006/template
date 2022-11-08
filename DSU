@@ -1,0 +1,37 @@
+class DSU{
+     
+   
+    vector<int> par;
+    vector<int> sz;
+    public : 
+    DSU(int size) {
+     par = vector<int> (size+1);
+     sz = vector<int> (size+1);
+     for(int i =0; i <= size; ++i) par[i] = i;
+     for(int i =0; i <= size; ++i) sz[i] = 1;
+        
+    }
+    
+    int findPar(int x) {
+        if(x == par[x]) return x;
+        return par[x] = findPar(par[x]);
+    }
+    
+    void join(int u, int v) {
+        
+        int paru = findPar(u);
+        int parv = findPar(v);
+        if(paru == parv) return;
+        
+        if(sz[parv] > sz[paru]) {
+            swap(u,v);
+            swap(paru,parv);
+        }
+        
+        par[parv] = paru;
+        sz[paru] += sz[parv];
+        return;
+    }
+    
+    
+};
