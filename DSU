@@ -1,9 +1,8 @@
 class DSU{
      
-   
+    public :
     vector<int> par;
-    vector<int> sz;
-    public : 
+    vector<int> sz; 
     DSU(int size) {
      par = vector<int> (size+1);
      sz = vector<int> (size+1);
