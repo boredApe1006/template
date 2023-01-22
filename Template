@@ -1,0 +1,74 @@
+#include <bits/stdc++.h>
+using namespace std;
+// Pragmas
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
+#pragma GCC optimize("Ofast")
+    #define fast { ios :: sync_with_stdio(false); cin.tie(0); cout.tie(0); }
+    #define pb push_back
+    #define ll long long 
+    #define vi vector<int>
+    #define vll vector<long long>
+    #define f(i,a,b) for(ll i=a;i<b;i++)
+    #define pii pair<int,int>
+    #define pll pair<ll,ll> 
+    #define endl "\n"
+    #define ALL(v) v.begin(),v.end()
+    #define nl cout<<"\n";
+    #define mp make_pair   
+    #define ff first
+    #define ss second
+   
+  
+  // DEBUGGING SECTION 
+void __print(int x) {cerr << x;}
+void __print(long long x) {cerr << x;}
+void __print(double x) {cerr << x;}
+void __print(long double x) {cerr << x;}
+void __print(char x) {cerr << '\'' << x << '\'';}
+void __print(const string &x) {cerr << '\"' << x << '\"';}
+void __print(bool x) {cerr << (x ? "true" : "false");}
+template<typename T, typename V>
+void __print(const pair<T, V> &x) {cerr << '{'; __print(x.first); cerr << ','; __print(x.second); cerr << '}';}
+template<typename T>
+void __print(const T &x) {int f = 0; cerr << '{'; for (auto &i : x) cerr << (f++ ? "," : ""), __print(i); cerr << "}";}
+void _print() {cerr << "]\n";}
+template <typename T, typename... V>
+void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v...);}
+ 
+#define dbg(x...) cerr << "[" << #x << "] = ["; _print(x)
+ 
+ const int mod = 1e9 + 7;     
+ ll mceil(ll a, ll b)    {   return (a+b-1)/b;       }
+ ll power(ll x, ll y)  { 	if(y==0) return 1;	ll u=power(x,y/2);	u=(u*u)%mod;	if(y%2)u=(x*u)%mod;	return u; }     
+ ll inv(ll x) {  return power(x,mod-2);    }
+ ll mul(ll a , ll b) { return (a*b)%mod;   }
+ ll add(ll a, ll b) { return (a+b)%mod;    }
+ ll sub(ll a, ll b) { return (a-b+mod)%mod; }
+ ll divi(ll a, ll b){return mul(a,inv(b));  }
+ vll fac, ifac;
+ ll c(ll a, ll b) {    if(b == 0) return 1;     if(a == 0) return 0;   return mul(fac[a], mul(ifac[b], ifac[a-b] ));  }
+ 
+ 
+
+
+ 
+ 
+     int main() 
+    {
+        fast
+       // srand(time(NULL));
+     
+        ll ntc=1;
+      // cin>>ntc;
+     
+        f(asdfghjk,1,ntc+1)
+        {
+           
+           cout << "hello "<<endl;
+           
+         
+        }
+     
+        return 0;
+    }
